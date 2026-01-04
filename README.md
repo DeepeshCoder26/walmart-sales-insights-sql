@@ -1,7 +1,7 @@
 # 🏨 Hotel Booking Cancellation Analysis
 
 ## About
-This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is sourced from the Kaggle Hotel Booking Demand dataset.
+This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is sourced from the Kaggle Hotel Booking dataset.
 
 ## Purposes of the Project
 The main goal of this project is to understand the dynamics of hotel booking cancellations, identify key drivers behind cancellations, and provide recommendations for improving booking policies and customer satisfaction.
@@ -68,3 +68,66 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
   - Cancellation trends over time  
   - ADR distribution by hotel type  
   - Customer type vs. cancellation likelihood  
+---
+
+<h2><a class="anchor" id="research-questions--key-findings"></a>Research Questions & Key Findings</h2>
+
+1. **Cancellation Hotspots**: City Hotel shows 15% higher cancellation rate than Resort Hotel  
+2. **Lead Time Effect**: Bookings with lead time > 60 days → 2.3x more likely to cancel  
+3. **Customer Type Impact**: Transient customers account for 76% of cancellations  
+4. **Revenue Loss**: Estimated $1M+ lost due to cancellations in peak months  
+5. **Deposit Type Influence**: Refundable deposits → 3x higher cancellation rate than non-refundable  
+6. **Seasonality Trends**: August and January show peak cancellation volumes across both hotel types  
+
+---
+
+<h2><a class="anchor" id="dashboard"></a>Dashboard</h2>
+
+- Excel Dashboard includes:
+  - KPI Cards: Total Bookings, Cancellation Rate, ADR, Revenue Loss  
+  - Charts:  
+    - Cancellation Rate by Hotel Type  
+    - Monthly Cancellation Trends  
+    - Lead Time vs Cancellation Probability  
+    - Customer Type vs Cancellation  
+    - Country-wise Cancellation Map  
+    - Deposit Type Impact Pie Chart  
+  - Pivot Table Insights:
+    - Distribution Channel vs Cancellation  
+    - ADR by Hotel Type and Month  
+    - Repeat vs New Guest Behavior  
+
+![Hotel Cancellations Dashboard](images/hotel_dashboard.png)
+
+---
+
+<h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
+
+1. Download the dataset from Kaggle:  
+   - [Hotel Booking Dataset](https://www.kaggle.com/datasets/mojtaba142/hotel-booking)  
+2. Open the Excel workbook:  
+   - `Hotel_Cancellations_Analysis.xlsx`  
+3. Navigate to the following sheets:  
+   - `Raw_Data` → Cleaned dataset  
+   - `Pivot_Insights` → Pivot tables for analysis  
+   - `Dashboard` → Interactive visuals and KPIs  
+4. Use slicers to filter trends by different years (2017-19) 
+
+---
+
+<h2><a class="anchor" id="final-recommendations"></a>Final Recommendations</h2>
+
+- Introduce incentives for early bookings with shorter lead times  
+- Promote non-refundable deposit options to reduce cancellations  
+- Target transient customers with loyalty programs  
+- Monitor seasonal trends to adjust pricing and policies  
+- Improve booking experience for high-cancellation countries  
+
+---
+
+<h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
+
+**Deepesh Vanjani**  
+Data Analyst  
+📧 Email: connectwithyoungceo@gmail.com  
+🔗 [LinkedIn] : (https://www.linkedin.com/in/deepeshvanjani/)
