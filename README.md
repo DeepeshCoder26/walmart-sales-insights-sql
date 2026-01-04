@@ -28,7 +28,7 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 | is_repeated_guest        | Whether the guest has booked before                                        | INT              |
 | reserved_room_type       | Type of reserved room                                                      | VARCHAR(5)       |
 | assigned_room_type       | Type of assigned room                                                      | VARCHAR(5)       |
-| reservation_status       | Status of reservation :**Booked** or **Cancelled**                         | VARCHAR(50)              |
+| reservation_status       | Status of reservation : **Booked** or **Cancelled**                         | VARCHAR(50)              |
 | deposit_type             | Type of deposit made                                                       | VARCHAR(30)      |
 | customer_type            | Type of customer (Transient, Group, Contract)                              | VARCHAR(30)      |
 | adr                      | Average Daily Rate                                                         | DECIMAL(10, 2)   |
