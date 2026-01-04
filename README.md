@@ -33,8 +33,6 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 | customer_type            | Type of customer (Transient, Group, Contract)                              | VARCHAR(30)      |
 | adr                      | Average Daily Rate                                                         | DECIMAL(10, 2)   |
 
-*(Only key columns are listed here for brevity.)*
-
 ## Analysis List:
 
 1. **Cancellation Analysis**  
