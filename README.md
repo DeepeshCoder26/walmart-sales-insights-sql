@@ -54,19 +54,19 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 - Other dropped columns are : market_segment, distribution_channel .  
 - Remove outliers in lead_time and ADR where necessary.
 - 
-***1. Data Cleaning***  
+***2. Data Cleaning***  
 - Handle missing values (e.g., children column, country codes).  
 - Standardize categorical variables for consistency.  
 - Remove outliers in lead_time and ADR where necessary.  
 
-***2. Feature Engineering***  
+***3. Feature Engineering***  
 - Create new columns such as:  
   - **stay_duration** = stays_in_weekend_nights + stays_in_week_nights  
   - **is_family** = flag for bookings with children  
   - **season** = categorize months into seasons (Winter, Summer, etc.)  
 - Add calculated fields in Excel for cancellation percentages and revenue impact.  
 
-***3. Exploratory Data Analysis (EDA)***  
+***4. Exploratory Data Analysis (EDA)***  
 - Used **Pivot Tables** to summarize cancellation rates by hotel type, country, and booking channel.
 
 - Built **Dashboards** in Excel to visualize:  
@@ -135,4 +135,4 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 **Deepesh Vanjani**  
 Data Analyst  
 📧 Email: connectwithyoungceo@gmail.com  
-🔗 [LinkedIn] : (https://www.linkedin.com/in/deepeshvanjani/)
+🔗 [LinkedIn] : https://www.linkedin.com/in/deepeshvanjani/
