@@ -1,14 +1,14 @@
 # 🏨 Hotel Booking Cancellation Analysis
 
 ## About
-This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is sourced from the Kaggle Hotel Booking dataset : https://www.kaggle.com/datasets/mojtaba142/hotel-booking
+This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is from Kaggle: https://www.kaggle.com/datasets/mojtaba142/hotel-booking
 
 ## Purposes of the Project
 The main goal of this project is to understand the dynamics of hotel booking cancellations, identify key drivers behind cancellations, and provide recommendations for improving booking policies and customer satisfaction.
 
 ## About Data
 This project's data was obtained from the Kaggle Hotel Booking dataset. It encompasses booking records from two hotel types: **City Hotel** and **Resort Hotel**.  
-The dataset contains 32 columns and over 40,000 rows, covering details such as booking dates, customer demographics, stay duration, and cancellation status.
+The dataset contains 35 columns and over 1,19,000 rows, covering details such as booking dates, customer demographics, stay duration, and cancellation status.
 
 | Column                  | Description                                                                 | Data Type        |
 |--------------------------|-----------------------------------------------------------------------------|------------------|
@@ -32,38 +32,37 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 | deposit_type             | Type of deposit made                                                       | VARCHAR(30)      |
 | customer_type            | Type of customer (Transient, Group, Contract)                              | VARCHAR(30)      |
 | adr                      | Average Daily Rate                                                         | DECIMAL(10, 2)   |
-
+*(Only key columns are listed to keep it brief.)*
 ## Analysis List:
 
 1. **Cancellation Analysis**  
-   > Explore cancellation rates across hotel types, booking channels, and customer segments to identify high-risk areas.
+   > Explore cancellation rates across hotel types, reservation dates and customer segments to identify high-risk areas.
 
-2. **Customer Behavior Analysis**  
-   > Understand customer demographics, booking lead times, and repeat guest behavior to evaluate loyalty and predict cancellations.
+2. **Customer Type Analysis**  
+   > Understand customer demographics, guest-type(singles, couples & families) and repeat guest behavior to evaluate loyalty and predict cancellations.
 
-3. **Revenue Analysis**  
-   > Assess the impact of cancellations on Average Daily Rate (ADR), revenue loss, and seasonal trends.
+3. **Customer Behavior Analysis**  
+   > Assess the impact of cancellations on undesired-room types, revenue loss, and seasonal trends.
 
 4. **Seasonality & Trends**  
-   > Identify peak months, weekdays, and seasonal patterns influencing cancellations and bookings.
+   > Identify peak months, country, and seasonal patterns influencing cancellations and bookings.
 
 ## Approach Used
 
 ***1. Data Transformation***  
 - Using PowerQuery, we drop unwanted columns (lead_time, arrival_date_weekend_number, stays_in_weekend_nights, stays_in_week_nights).  
-- Other dropped columns are : market_segment, distribution_channel .  
-- Remove outliers in lead_time and ADR where necessary.
+- Other dropped columns are : market_segment, distribution_channel, adr etc.  
+- Addition of Two Columns : Room Status (Desired/Undesired) and Guest-Type (Singles, Couples or Family)
   
 ***2. Data Cleaning***  
 - Handle missing values (e.g., children column, country codes).  
 - Standardize categorical variables for consistency.  
-- Remove outliers in lead_time and ADR where necessary.  
-
+- Setting values for guest-type : Singles - 1 Adult, Couples - 2  Adults, Family : >2 Adults, >=1 Children
+   
 ***3. Feature Engineering***  
 - Create new columns such as:  
-  - **stay_duration** = stays_in_weekend_nights + stays_in_week_nights  
+  - **room_status** = reserved_room_type == assigned_room_type   
   - **is_family** = flag for bookings with children  
-  - **season** = categorize months into seasons (Winter, Summer, etc.)  
 - Add calculated fields in Excel for cancellation percentages and revenue impact.  
 
 ***4. Exploratory Data Analysis (EDA)***  
