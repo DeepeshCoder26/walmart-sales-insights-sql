@@ -1,13 +1,13 @@
 # 🏨 Hotel Booking Cancellation Analysis
 
 ## About
-This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is sourced from the Kaggle Hotel Booking dataset.
+This project analyzes hotel booking cancellation data to uncover patterns, trends, and factors influencing cancellations. The primary objective is to provide actionable insights for hotels to reduce cancellation rates, improve customer retention, and optimize revenue management strategies. The dataset utilized in this project is sourced from the Kaggle Hotel Booking dataset : https://www.kaggle.com/datasets/mojtaba142/hotel-booking
 
 ## Purposes of the Project
 The main goal of this project is to understand the dynamics of hotel booking cancellations, identify key drivers behind cancellations, and provide recommendations for improving booking policies and customer satisfaction.
 
 ## About Data
-This project's data was obtained from the Kaggle Hotel Booking Demand dataset. It encompasses booking records from two hotel types: **City Hotel** and **Resort Hotel**.  
+This project's data was obtained from the Kaggle Hotel Booking dataset. It encompasses booking records from two hotel types: **City Hotel** and **Resort Hotel**.  
 The dataset contains 32 columns and over 40,000 rows, covering details such as booking dates, customer demographics, stay duration, and cancellation status.
 
 | Column                  | Description                                                                 | Data Type        |
@@ -28,7 +28,7 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 | is_repeated_guest        | Whether the guest has booked before                                        | INT              |
 | reserved_room_type       | Type of reserved room                                                      | VARCHAR(5)       |
 | assigned_room_type       | Type of assigned room                                                      | VARCHAR(5)       |
-| booking_changes          | Number of changes made to the booking                                     | INT              |
+| rservation_status        | Status of reservation :**Booked** or **Cancelled**                         | VARCHAR(50)              |
 | deposit_type             | Type of deposit made                                                       | VARCHAR(30)      |
 | customer_type            | Type of customer (Transient, Group, Contract)                              | VARCHAR(30)      |
 | adr                      | Average Daily Rate                                                         | DECIMAL(10, 2)   |
@@ -49,6 +49,11 @@ The dataset contains 32 columns and over 40,000 rows, covering details such as b
 
 ## Approach Used
 
+***1. Data Transformation***  
+- Using PowerQuery, we drop unwanted columns (lead_time, arrival_date_weekend_number, stays_in_weekend_nights, stays_in_week_nights).  
+- Other dropped columns are : market_segment, distribution_channel .  
+- Remove outliers in lead_time and ADR where necessary.
+- 
 ***1. Data Cleaning***  
 - Handle missing values (e.g., children column, country codes).  
 - Standardize categorical variables for consistency.  
